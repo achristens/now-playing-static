@@ -209,7 +209,7 @@ figure {
     width: 5rem;
     height: 100%;
     display: inline-block;
-    z-index: auto;
+    z-index: 1;
     padding-top: 90px;
   }
 
@@ -221,28 +221,28 @@ figure {
 
   header.site-header {
     display: inline-block;
-    width: 10%;
+    /*width: 10%;*/
   }
 
   main {
     display: inline-block;
     float: right;
-    width: 90%;
+    margin-left: 80px;
   }
 
   .site-logo{
     top: 0.2rem;
     left: 0.03rem;
-    width: 5rem;
+    width: 80px;
   }
 
   .movie-overview{
     display: block;
   }
-
+/*
   .article{
     width: 101%;
-  }
+  }*/
   .site-footer{
     background: #000;
     color: #fff;
