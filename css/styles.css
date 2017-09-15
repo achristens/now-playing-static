@@ -224,7 +224,7 @@ figure {
   }
   main {
     display: inline-block;
-    float: right;
+    /*float: right;*/
     margin-left: 80px;
   }
   .site-logo {
