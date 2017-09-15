@@ -263,4 +263,9 @@ figure {
   article:nth-child(n+2) .movie-backdrop {
     display: none;
   }
+  article:nth-child(n+2) {
+    width: 33%;
+    display: inline-block;
+  }
+
 }
