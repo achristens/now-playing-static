@@ -202,6 +202,7 @@ figure {
 
 
 /*MEDIA QUERIES*/
+
 @media ( min-width: 768px) {
   nav.site-nav {
     position: fixed;
@@ -212,53 +213,54 @@ figure {
     z-index: 1;
     padding-top: 90px;
   }
-
   li.site-nav-item {
     display: block;
     float: none;
     width: auto;
   }
-
   header.site-header {
     display: inline-block;
     /*width: 10%;*/
   }
-
   main {
     display: inline-block;
     float: right;
     margin-left: 80px;
   }
-
-  .site-logo{
+  .site-logo {
     top: 0.2rem;
     left: 0.03rem;
     width: 80px;
   }
-
-  .movie-overview{
+  .movie-overview {
     display: block;
   }
-/*
-  .article{
-    width: 101%;
-  }*/
-  .site-footer{
+  .site-footer {
     background: #000;
     color: #fff;
   }
-  .footer-nav{
+  .footer-nav {
     display: inline-block;
   }
-
-  .about{
+  .about {
     display: inline-block;
   }
 }
 
-@media ( min-width: 992px ){
-  .site-header{
-    width 5.3em;
+@media ( min-width: 992px) {
+  .movie-overview {
+    display: none;
   }
-
+  article:first-child .movie-overview {
+    display: block;
+  }
+  .movie-poster {
+    display: block;
+  }
+  article:first-child .movie-poster {
+    display: none;
+  }
+  article:nth-child(n+2) .movie-backdrop {
+    display: none;
+  }
 }
