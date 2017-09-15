@@ -7,15 +7,12 @@ html {
   color: #333333;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
 body {
   margin: 0;
-
   /*
     We need to add some padding to the bottom of the body on mobile so that
      the footer won't get covered by our navigation
@@ -23,10 +20,12 @@ body {
   padding-bottom: 60px;
 }
 
+
 /*
   This rule ensure that all images always fit in their container
    but are never stretched beyond their native resolution
 */
+
 img {
   max-width: 100%;
 }
@@ -38,6 +37,7 @@ figure {
 
 
 /* CLEARFIX - for ensuring floated elements are contained in their parent */
+
 .clearfix::after {
   content: "";
   display: table;
@@ -46,6 +46,7 @@ figure {
 
 
 /* NAVIGATION styles */
+
 .site-logo {
   position: fixed;
   top: 1rem;
@@ -66,8 +67,7 @@ figure {
   background-color: #ffffff;
 }
 
-.site-nav-list,
-.footer-nav-list {
+.site-nav-list, .footer-nav-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -84,7 +84,7 @@ figure {
   text-transform: uppercase;
 }
 
-.site-nav-item > .fa {
+.site-nav-item>.fa {
   font-size: 1.75rem;
 }
 
@@ -101,19 +101,21 @@ figure {
 
 
 /* MOVIE styles */
+
 .movie {
   position: relative;
 }
 
-.movie-poster,
-.movie-backdrop {
+.movie-poster, .movie-backdrop {
   display: block;
 }
+
 
 /*
   Hide the poster on mobile devices, only show backdrop
   TIP: Use media queries to reveal it on larger devices
 */
+
 .movie-poster {
   display: none;
 }
@@ -126,7 +128,6 @@ figure {
   width: 100%;
   padding: 1em;
   color: #ffffff;
-
   /*
     Linear gradients are a bit of an advanced CSS3 feature.
       As seen below you specify the linear-gradient as a value for
@@ -134,14 +135,15 @@ figure {
       as you care to define. To learn more about how it works, read this article
       and the related docs: https://medium.com/@patrickbrosset/do-you-really-understand-css-linear-gradients-631d9a895caf#.6yl8vdmiv
   */
-
   background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.7) 100%);
 }
+
 
 /*
   Hide the overview on mobile devices
   TIP: Use media queries to reveal it on larger devices
 */
+
 .movie-overview {
   display: none;
 }
@@ -163,6 +165,7 @@ figure {
 
 
 /* FOOTER styles */
+
 .site-footer {
   text-align: center;
 }
@@ -176,15 +179,16 @@ figure {
   margin-right: 0.5em;
 }
 
+
 /*
   The :last-child pseudo-selector lets you select only the last element
     within a containing element. Similarly, there's a :first-child pseudo-selector
     to select the first child of a containing element.
 */
+
 .footer-nav-item:last-child {
   margin-right: 0;
 }
-
 
 .about {
   background-color: #333333;
@@ -192,6 +196,58 @@ figure {
   padding: 1em;
 }
 
-.about > p {
+.about>p {
   margin: 0;
+}
+
+
+/*MEDIA QUERIES*/
+@media ( min-width: 768px) {
+  nav.site-nav {
+    position: fixed;
+    left: 0;
+    width: 5.4rem;
+    height: 100%;
+    display: inline-block;
+    z-index: auto;
+    padding-top: 90px;
+  }
+
+  li.site-nav-item {
+    display: block;
+    float: none;
+    width: auto;
+  }
+
+  header.site-header {
+    display: inline-block;
+    width: 10%;
+  }
+
+  main {
+    display: inline-block;
+    width: 89.5%;
+  }
+
+  .site-logo{
+    top: 0.2rem;
+    left: 0.03rem;
+    width: 5.4rem;
+  }
+
+  .movie-overview{
+    display: block;
+  }
+
+  .site-footer{
+    background: #000;
+    color: #fff;
+  }
+  .footer-nav{
+    display: inline-block;
+  }
+
+  .about{
+    display: inline-block;
+  }
 }
